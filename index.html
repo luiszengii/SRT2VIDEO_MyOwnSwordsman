@@ -1,14 +1,41 @@
-<!-- The entry point of the app -->
+<!-- entry point  -->
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SRT2VIDEO - My Own Swordsman</title>
-</head>
-<body>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
-    <script src="sketch.js"></script>
-</body>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>SRT 2 VIDEO</title>
+	    
+	    <meta name="apple-mobile-web-app-capable" content="yes" />
+	    <meta name="apple-mobile-web-app-title" content="SRT 2 VIDEO">
+	    <link rel="apple-touch-icon" href="/favicon.png">
+
+		<link href="style/common.css" type="text/css" rel="stylesheet">
+		<link href="style/style.less" type="text/css" rel="stylesheet/less">
+		<script src="libs/p5.min.js" type="text/javascript"></script>
+		<script src="libs/parse-srt.js" type="text/javascript"></script>
+		<script src="libs/less.min.js" type="text/javascript"></script>
+		<link rel="shortcut icon" href="favicon.png" />
+	</head>
+	<body ontouchstart="">
+		<div id="media">
+			<video muted loop preload="auto" controls playsinline>
+				<source src="assets/back-to-the-future-2.mp4" type="video/mp4">
+			</video>
+		</div>
+		<div id="sourceInfo" class="desktop-only">
+			<label id="videoFile"><span>Loading movie...</span></label><br>
+			<label id="subtitlesFile"><span>Loading subtitles...</span></label>
+		</div>
+		<main></main>
+		<div id="toggleSettings" class="desktop-only">Settings</div>
+		<div id="settings" class="desktop-only">
+			<div><span>Font Size</span> <input type="range" min="12" value="20" step="1" max="50" id="fontsize"></div>
+			<div><span>Brightness</span> <input type="range" min="0.5" step="0.001" max="5" id="brightness"></div>
+			<div><span>Contrast</span> <input type="range" min="0.5" step="0.001" max="3" id="contrast"></div>
+			<div><span>Fluency</span> <input type="range" min="0.1" step="0.001" max="1" id="fluency"></div>
+			<div><button id="toggleTimeGaps">Show time gaps</button></div>
+		</div>
+		<script src="js/functions.js" type="text/javascript"></script>
+		<script src="js/sketch.js" type="text/javascript"></script>
+	</body>
 </html>
