@@ -74,9 +74,9 @@ function setup() {
     videoFileInput.parent('videoFile');
     subtitlesFileInput.parent('subtitlesFile');
 
-    videoFileName.innerHTML = "Back To The Future 2.mp4";
+    videoFileName.innerHTML = "My Own Swordsman Mid-Autumn Festival.mp4";
     document.body.classList.add('videoLoaded');
-    handleSubtitlesFile(undefined, "assets/back-to-the-future-2-en.srt");
+    handleSubtitlesFile(undefined, "assets/subtitles-double.srt");
 
     document.addEventListener('click', () => {
         if(source.readyState) {
